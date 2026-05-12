@@ -65,8 +65,8 @@
     "typescript": "^5.7.0"
   },
   "build": {
-    "appId": "com.workersolo.app",
-    "productName": "Worker Solo",
+    "appId": "com.hyclaw.app",
+    "productName": "HyClaw",
     "directories": {
       "output": "dist"
     },
@@ -96,7 +96,7 @@
     "publish": {
       "provider": "github",
       "owner": "anomalyco",
-      "repo": "worker-solo"
+      "repo": "hyclaw"
     }
   }
 }

@@ -18,7 +18,7 @@ function createWindow(): void {
     height: 900,
     minWidth: 900,
     minHeight: 600,
-    title: 'Worker Solo',
+    title: 'HyClaw',
     titleBarStyle: 'hiddenInset',
     vibrancy: 'under-window',
     visualEffectState: 'active',
@@ -59,15 +59,15 @@ function createTray(): void {
   tray = new Tray(icon.resize({ width: 16, height: 16 }))
 
   const contextMenu = Menu.buildFromTemplate([
-    { label: '显示 Worker Solo', click: () => mainWindow?.show() },
+    { label: '显示 HyClaw', click: () => mainWindow?.show() },
     { type: 'separator' },
     {
       label: '关于',
       click: () => {
         dialog.showMessageBox(mainWindow!, {
           type: 'info',
-          title: '关于 Worker Solo',
-          message: 'Worker Solo v' + app.getVersion(),
+          title: '关于 HyClaw',
+          message: 'HyClaw v' + app.getVersion(),
           detail: '多 Agent 协作的编程工作台\n\n以群聊模式驱动多 Agent 协作开发。',
           buttons: ['确定']
         })
@@ -89,7 +89,7 @@ function createTray(): void {
     }
   ])
 
-  tray.setToolTip('Worker Solo')
+  tray.setToolTip('HyClaw')
   tray.setContextMenu(contextMenu)
 
   tray.on('click', () => {
@@ -125,7 +125,7 @@ function initAutoUpdater(): void {
     dialog.showMessageBox(mainWindow!, {
       type: 'info',
       title: '发现新版本',
-      message: `Worker Solo v${info.version} 可用`,
+      message: `HyClaw v${info.version} 可用`,
       detail: '是否立即下载更新？',
       buttons: ['下载', '稍后']
     }).then(({ response }) => {
@@ -161,7 +161,7 @@ function initAutoUpdater(): void {
 app.whenReady().then(() => {
   // Start local API server
   const port = startApiServer()
-  console.log(`[WorkerSolo] API port: ${port}`)
+  console.log(`[HyClaw] API port: ${port}`)
 
   // Register IPC handlers
   registerGitIPC()

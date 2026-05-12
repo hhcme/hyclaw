@@ -202,7 +202,7 @@ class SchedulerService extends EventEmitter {
       const data = JSON.stringify(Array.from(this.tasks.values()))
       const fs = require('node:fs')
       const path = require('node:path')
-      const dir = path.join(process.env.HOME || '/tmp', 'worker-solo-data')
+      const dir = path.join(process.env.HOME || '/tmp', 'hyclaw-data')
       if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
       fs.writeFileSync(path.join(dir, 'scheduler-tasks.json'), data)
     } catch {}
@@ -212,7 +212,7 @@ class SchedulerService extends EventEmitter {
     try {
       const fs = require('node:fs')
       const path = require('node:path')
-      const file = path.join(process.env.HOME || '/tmp', 'worker-solo-data', 'scheduler-tasks.json')
+      const file = path.join(process.env.HOME || '/tmp', 'hyclaw-data', 'scheduler-tasks.json')
       if (!fs.existsSync(file)) return
       const data = JSON.parse(fs.readFileSync(file, 'utf-8'))
       for (const task of data as ScheduledTask[]) {
@@ -228,7 +228,7 @@ class SchedulerService extends EventEmitter {
     try {
       const fs = require('node:fs')
       const path = require('node:path')
-      const dir = path.join(process.env.HOME || '/tmp', 'worker-solo-data')
+      const dir = path.join(process.env.HOME || '/tmp', 'hyclaw-data')
       if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
       fs.writeFileSync(
         path.join(dir, 'scheduler-logs.json'),

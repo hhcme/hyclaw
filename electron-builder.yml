@@ -1,5 +1,5 @@
-appId: com.workersolo.app
-productName: Worker Solo
+appId: com.hyclaw.app
+productName: HyClaw
 directories:
   output: dist
   buildResources: resources
@@ -14,19 +14,19 @@ mac:
   target:
     - dmg
     - zip
-  artifactName: Worker-Solo-${version}-mac-${arch}.${ext}
+  artifactName: HyClaw-${version}-mac-${arch}.${ext}
   category: public.app-category.developer-tools
   entitlements: build/entitlements.mac.plist
   entitlementsInherit: build/entitlements.mac.plist
   hardenedRuntime: true
 dmg:
-  title: Worker Solo
+  title: HyClaw
   icon: resources/icon.icns
 win:
   target:
     - nsis
     - zip
-  artifactName: Worker-Solo-${version}-win-${arch}.${ext}
+  artifactName: HyClaw-${version}-win-${arch}.${ext}
   icon: resources/icon.ico
 nsis:
   oneClick: false
@@ -37,10 +37,10 @@ linux:
   target:
     - AppImage
     - deb
-  artifactName: Worker-Solo-${version}-linux-${arch}.${ext}
+  artifactName: HyClaw-${version}-linux-${arch}.${ext}
   icon: resources/icon.png
   category: Development
 publish:
   provider: github
-  owner: anomalyco
-  repo: worker-solo
+  owner: hhcme
+  repo: hyclaw

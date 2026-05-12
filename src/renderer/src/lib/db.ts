@@ -6,7 +6,7 @@ interface AppMeta {
   value: any
 }
 
-class WorkerSoloDB extends Dexie {
+class HyClawDB extends Dexie {
   projects!: Table<Project, string>
   agents!: Table<Agent, string>
   conversations!: Table<Conversation, string>
@@ -15,7 +15,7 @@ class WorkerSoloDB extends Dexie {
   meta!: Table<AppMeta, string>
 
   constructor() {
-    super('worker-solo')
+    super('hyclaw')
 
     this.version(2).stores({
       projects: 'id, name, createdAt',
@@ -28,7 +28,7 @@ class WorkerSoloDB extends Dexie {
   }
 }
 
-export const db = new WorkerSoloDB()
+export const db = new HyClawDB()
 
 // --- Full persistence ---
 

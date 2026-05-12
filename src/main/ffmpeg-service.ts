@@ -36,7 +36,7 @@ class FFmpegService {
   private outputDir: string
 
   constructor() {
-    this.outputDir = path.join(process.env.HOME || '/tmp', 'worker-solo-output')
+    this.outputDir = path.join(process.env.HOME || '/tmp', 'hyclaw-output')
     if (!fs.existsSync(this.outputDir)) {
       fs.mkdirSync(this.outputDir, { recursive: true })
     }

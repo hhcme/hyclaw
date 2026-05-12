@@ -46,8 +46,8 @@ export class GitService {
     }
     if (!await this.isRepo()) {
       await this.git('init')
-      await this.git('config user.name "Worker Solo"')
-      await this.git('config user.email "worker-solo@local"')
+      await this.git('config user.name "HyClaw"')
+      await this.git('config user.email "hyclaw@local"')
     }
   }
 

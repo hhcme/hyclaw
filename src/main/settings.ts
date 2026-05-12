@@ -59,7 +59,7 @@ const defaultSettings: AppSettings = {
   providers: []
 }
 
-const settingsPath = path.join(process.env.HOME || '/tmp', 'worker-solo-data', 'settings.json')
+const settingsPath = path.join(process.env.HOME || '/tmp', 'hyclaw-data', 'settings.json')
 
 let settings: AppSettings = { ...defaultSettings }
 

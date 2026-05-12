@@ -1,6 +1,10 @@
-# Worker Solo
+# HyClaw
 
 多 Agent 协作的编程工作台。以项目管理的视角组织 AI Agent，以群聊模式驱动多 Agent 协作开发。
+
+## 仓库
+
+https://github.com/hhcme/hyclaw
 
 ## 文档
 
@@ -30,7 +34,7 @@ npm run dev
 ## 项目结构
 
 ```
-worker-solo/
+hyclaw/
 ├── src/
 │   ├── main/          # Electron 主进程
 │   ├── preload/       # 预加载脚本

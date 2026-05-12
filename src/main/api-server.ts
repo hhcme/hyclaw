@@ -12,7 +12,7 @@ interface ChatRequest {
   }>
 }
 
-const SYSTEM_PROMPT = `你是 Worker Solo 的 PM Agent（产品经理），负责协调项目中的 Agent 团队完成用户需求。
+const SYSTEM_PROMPT = `你是 HyClaw 的 PM Agent（产品经理），负责协调项目中的 Agent 团队完成用户需求。
 
 你的职责：
 1. 理解用户需求，将其分解为可执行的任务
@@ -175,7 +175,7 @@ export function startApiServer(): number {
   if (server) return PORT
   server = createServer()
   server.listen(PORT, '127.0.0.1', () => {
-    console.log(`[WorkerSolo] API server → http://127.0.0.1:${PORT}`)
+    console.log(`[HyClaw] API server → http://127.0.0.1:${PORT}`)
   })
   return PORT
 }

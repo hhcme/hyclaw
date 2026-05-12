@@ -22,7 +22,7 @@ export function VideoPanel() {
   const [trimDuration, setTrimDuration] = useState('10')
   const [targetRes, setTargetRes] = useState('1920:1080')
   const [targetFps, setTargetFps] = useState('30')
-  const [subtitleText, setSubtitleText] = useState('Worker Solo')
+  const [subtitleText, setSubtitleText] = useState('HyClaw')
 
   useEffect(() => {
     window.electronAPI?.ffmpeg?.detect().then((r: any) => {
