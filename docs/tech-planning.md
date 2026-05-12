@@ -1,4 +1,4 @@
-# Worker Solo - 技术规划文档
+# HyClaw - 技术规划文档
 
 ## 一、总体架构
 
@@ -223,7 +223,7 @@ Electron Main Process
 ## 六、项目目录结构（规划）
 
 ```
-worker-solo/
+hyclaw/
 ├── electron/              # Electron Main Process
 │   ├── main.ts
 │   ├── preload.ts
@@ -301,7 +301,7 @@ worker-solo/
 采用 **Git Submodule** 方式将 OpenCode 源码嵌入项目，不依赖系统全局安装：
 
 ```
-worker-solo/
+hyclaw/
 ├── vendor/
 │   └── opencode/          ← git submodule，Fork 自 anomalyco/opencode
 └── src/

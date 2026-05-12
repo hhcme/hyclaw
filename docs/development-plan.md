@@ -1,4 +1,4 @@
-# Worker Solo - 开发计划
+# HyClaw - 开发计划
 
 ## 总原则
 
