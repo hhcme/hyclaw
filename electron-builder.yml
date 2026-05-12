@@ -1,0 +1,46 @@
+appId: com.workersolo.app
+productName: Worker Solo
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - out/**/*
+  - "!node_modules/**/*"
+  - node_modules/electron-updater/out/**/*
+asar: true
+asarUnpack:
+  - node_modules/croner/**
+mac:
+  target:
+    - dmg
+    - zip
+  artifactName: Worker-Solo-${version}-mac-${arch}.${ext}
+  category: public.app-category.developer-tools
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+  hardenedRuntime: true
+dmg:
+  title: Worker Solo
+  icon: resources/icon.icns
+win:
+  target:
+    - nsis
+    - zip
+  artifactName: Worker-Solo-${version}-win-${arch}.${ext}
+  icon: resources/icon.ico
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  installerIcon: resources/icon.ico
+  uninstallerIcon: resources/icon.ico
+linux:
+  target:
+    - AppImage
+    - deb
+  artifactName: Worker-Solo-${version}-linux-${arch}.${ext}
+  icon: resources/icon.png
+  category: Development
+publish:
+  provider: github
+  owner: anomalyco
+  repo: worker-solo
